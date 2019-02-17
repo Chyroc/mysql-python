@@ -1,4 +1,7 @@
-from ConfigParser import SafeConfigParser
+try:
+    from ConfigParser import SafeConfigParser
+except ImportError:
+    from configparser import SafeConfigParser
 
 def get_metadata_and_options():
     config = SafeConfigParser()
